@@ -1,5 +1,67 @@
 <html>
   <body>
-    
+    <article class="weather-card">
+      <section class="current-weather">
+        <header>
+          <h1 class="day-name">Monday</h1>
+          <time datetime="2022-06-20">20 Jun 2022</time>
+        </header>
+
+        <div class="weather-status">
+          <button class="unit-toggle" aria-label="Toggle Celsius/Fahrenheit">°C</button>
+          
+          <div class="temp-display">
+            <span class="icon-sunny" aria-hidden="true">☀️</span>
+            <p class="temperature">29 °C</p>
+            <p class="description">Sunny</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="weather-details">
+        <dl class="stats-list">
+          <div class="stat">
+            <dt>Precipitation</dt>
+            <dd>0%</dd>
+          </div>
+          <div class="stat">
+            <dt>Humidity</dt>
+            <dd>42%</dd>
+          </div>
+          <div class="stat">
+            <dt>Wind</dt>
+            <dd>3 km/h</dd>
+          </div>
+        </dl>
+
+        <nav class="forecast-toggle">
+          <button aria-pressed="true">3 Day</button>
+          <button aria-pressed="false">7 Day</button>
+        </nav>
+
+        <section class="forecast">
+          <h2 class="visually-hidden">Weekly Forecast</h2>
+          <ul class="forecast-list">
+            <li class="forecast-day active">
+              <span class="day">Mon</span>
+              <span class="icon">☀️</span>
+              <span class="temp">30°C</span>
+            </li>
+            <li class="forecast-day">
+              <span class="day">Tue</span>
+              <span class="icon">🌧️</span>
+              <span class="temp">26°C</span>
+            </li>
+          </ul>
+        </section>
+
+        <footer class="location-footer">
+          <button class="location-btn">
+            <span class="icon-pin" aria-hidden="true">📍</span>
+            New York City
+          </button>
+        </footer>
+      </section>
+    </article>
   </body>
 </html>

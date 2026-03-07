@@ -1,0 +1,47 @@
+:root {
+  /* Colors */
+  --color-navy-blue-100: #222831;
+  --color-navy-blue-80: rgba(34, 40, 49, 0.8);
+  --color-white-100: #FFFFFF;
+  --color-black-100: #000000;
+  --color-light-blue-100: #88EBEF;
+  --color-dark-blue-100: #5056B1;
+  --color-indigo-100: #A2A7EF;
+
+  /* Font sizes (values taken from token values) */
+  --font-size-12: 10px;
+  --font-size-14: 14px;
+  --font-size-24: 24px;
+  --font-size-26: 26px;
+  --font-family-montserrat: "Montserrat", sans-serif;
+  --font-family-arial: "Arial", sans-serif;
+
+  /* Border radii */
+  --border-radius-30: 30px;
+  --border-radius-24: 24px;
+  --border-radius-10: 10px;
+
+  /* Semantic tokens (light / dark / mobile variants) */
+  /* Mode */
+  --app-background: var(--color-white-100);
+  --app-background-dark: var(--color-navy-blue-100);
+  --app-background-mobile: var(--color-white-100);
+  --app-background-mobile-dark: var(--color-navy-blue-100);
+
+  /* Type */
+  --font-heading-sm: var(--font-size-18);
+  --font-heading-md: var(--font-size-22);
+  --font-heading-lg: var(--font-size-28);
+
+  /* Heading Fonts */
+  --heading-font-primary: var(--font-family-montserrat);
+  --heading-font-secondary: var(--font-family-arial);
+
+  /* Borders */
+  --border-radius: var(--border-radius-30);
+  --border-radius-dark: var(--border-radius-30);
+  --border-radius-day: var(--border-radius-10);
+  --border-radius-button: var(--border-radius-10);
+  --border-radius-mobile: var(--border-radius-24);
+  --border-radius-mobile-dark: var(--border-radius-24);
+}

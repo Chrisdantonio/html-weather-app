@@ -1,67 +1,129 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
   <body>
-    <article class="weather-card">
-      <section class="current-weather">
-        <header>
-          <h1 class="day-name">Monday</h1>
-          <time datetime="2022-06-20">20 Jun 2022</time>
-        </header>
+    <main class="app">
+      <article class="weather-card">
 
-        <div class="weather-status">
-          <button class="unit-toggle" aria-label="Toggle Celsius/Fahrenheit">°C</button>
-          
-          <div class="temp-display">
-            <span class="icon-sunny" aria-hidden="true">☀️</span>
+        <section class="current-weather">
+          <div class="current-weather__bg" aria-hidden="true">
+            <img
+              src="https://www.figma.com/api/mcp/asset/eea90fc2-8dd8-4f5a-84e7-1d6952622bed"
+              alt=""
+              class="current-weather__photo"
+            >
+          </div>
+
+          <header class="current-weather__header">
+            <div>
+              <h1 class="day-name">Monday</h1>
+              <time datetime="2022-06-20" class="date">20 Jun 2022</time>
+            </div>
+            <button class="unit-toggle" aria-label="Toggle temperature unit">
+              <span class="unit-toggle__knob">
+                <span class="unit-toggle__label">°C</span>
+              </span>
+            </button>
+          </header>
+
+          <div class="current-weather__main">
+            <img
+              src="https://www.figma.com/api/mcp/asset/2a8ba5df-f8e3-4545-accc-c4f55e86c127"
+              alt="Sunny"
+              class="weather-icon"
+            >
             <p class="temperature">29 °C</p>
             <p class="description">Sunny</p>
           </div>
-        </div>
-      </section>
-
-      <section class="weather-details">
-        <dl class="stats-list">
-          <div class="stat">
-            <dt>Precipitation</dt>
-            <dd>0%</dd>
-          </div>
-          <div class="stat">
-            <dt>Humidity</dt>
-            <dd>42%</dd>
-          </div>
-          <div class="stat">
-            <dt>Wind</dt>
-            <dd>3 km/h</dd>
-          </div>
-        </dl>
-
-        <nav class="forecast-toggle">
-          <button aria-pressed="true">3 Day</button>
-          <button aria-pressed="false">7 Day</button>
-        </nav>
-
-        <section class="forecast">
-          <h2 class="visually-hidden">Weekly Forecast</h2>
-          <ul class="forecast-list">
-            <li class="forecast-day active">
-              <span class="day">Mon</span>
-              <span class="icon">☀️</span>
-              <span class="temp">30°C</span>
-            </li>
-            <li class="forecast-day">
-              <span class="day">Tue</span>
-              <span class="icon">🌧️</span>
-              <span class="temp">26°C</span>
-            </li>
-          </ul>
         </section>
 
-        <footer class="location-footer">
-          <button class="location-btn">
-            <span class="icon-pin" aria-hidden="true">📍</span>
-            New York City
-          </button>
-        </footer>
-      </section>
-    </article>
+        <section class="weather-details">
+          <dl class="stats-list">
+            <div class="stat">
+              <dt>Precipitation</dt>
+              <dd>0%</dd>
+            </div>
+            <div class="stat">
+              <dt>Humidity</dt>
+              <dd>42%</dd>
+            </div>
+            <div class="stat">
+              <dt>Wind</dt>
+              <dd>3 km/h</dd>
+            </div>
+          </dl>
+
+          <nav class="forecast-toggle" aria-label="Forecast range">
+            <button class="forecast-toggle__btn forecast-toggle__btn--active" aria-pressed="true">3 DAY</button>
+            <span class="forecast-toggle__divider" aria-hidden="true"></span>
+            <button class="forecast-toggle__btn" aria-pressed="false">7 DAY</button>
+          </nav>
+
+          <section class="forecast">
+            <h2 class="visually-hidden">Forecast</h2>
+            <ul class="forecast-list">
+              <li class="forecast-day forecast-day--active">
+                <span class="forecast-day__name">Mon</span>
+                <img
+                  src="https://www.figma.com/api/mcp/asset/360781fc-b145-4248-b589-6f7181d177e5"
+                  alt="Sunny"
+                  class="forecast-day__icon"
+                >
+                <span class="forecast-day__temp">30 °C</span>
+              </li>
+              <li class="forecast-day">
+                <span class="forecast-day__name">Tues</span>
+                <img
+                  src="https://www.figma.com/api/mcp/asset/c1eed9a5-9a7b-4475-a8ad-6430306f30e2"
+                  alt="Cloudy"
+                  class="forecast-day__icon"
+                >
+                <span class="forecast-day__temp">26 °C</span>
+              </li>
+              <li class="forecast-day">
+                <span class="forecast-day__name">Wed</span>
+                <img
+                  src="https://www.figma.com/api/mcp/asset/b18e8d7d-3642-415a-a303-343d47260a71"
+                  alt="Rainy"
+                  class="forecast-day__icon"
+                >
+                <span class="forecast-day__temp">6°C</span>
+              </li>
+              <li class="forecast-day">
+                <span class="forecast-day__name">Thurs</span>
+                <img
+                  src="https://www.figma.com/api/mcp/asset/360781fc-b145-4248-b589-6f7181d177e5"
+                  alt="Sunny"
+                  class="forecast-day__icon"
+                >
+                <span class="forecast-day__temp">26°C</span>
+              </li>
+            </ul>
+          </section>
+
+          <footer class="location-footer">
+            <button class="location-btn">
+              <img
+                src="https://www.figma.com/api/mcp/asset/46579739-cef0-40bb-ae67-17a2eb106572"
+                alt=""
+                class="location-btn__icon"
+                aria-hidden="true"
+              >
+              New York City
+            </button>
+          </footer>
+        </section>
+
+      </article>
+    </main>
   </body>
 </html>

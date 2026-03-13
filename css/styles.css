@@ -61,7 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px 28px;
+  padding: 32px 40px;
   z-index: 1;
 }
 
@@ -259,6 +259,15 @@ body {
 
 .forecast-day--active {
   background: var(--color-white-100);
+}
+
+.forecast-day--inactive .forecast-day__name,
+.forecast-day--inactive .forecast-day__temp {
+  color: var(--color-white-100);
+}
+
+.forecast-day--inactive .forecast-day__icon {
+  filter: brightness(0) invert(1);
 }
 
 .forecast-day__name {
